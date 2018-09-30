@@ -1,0 +1,7 @@
+{% block content %}
+  <form method="GET" action="http://localhost:5000/album_result">
+      <p>{{ form.albumname.label }}{{ form.albumname() }}</p>
+      <p>{{ form.rating.label }}{{ form.rating() }}</p>
+      {{ form.submit() }}
+  </form>
+{% endblock %}
