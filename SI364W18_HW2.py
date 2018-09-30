@@ -91,8 +91,6 @@ def albumentry():
 @app.route('/album_result', methods = ['GET','POST'])
 def albumresult():
     form = AlbumEntryForm(request.args)
-    print(form.albumname)
-    print(form.rating.data)
     return render_template('album_data.html', albumname = form.albumname.data, rating = form.rating.data)
 
 if __name__ == '__main__':
